@@ -29,10 +29,6 @@
 
 ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=JackPlowman&show_icons=true)
 
-### Most Used Languages
-
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=JackPlowman&theme=blue-green)
-
 ### Code Training
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/JackPlowman?hide=ranking)
