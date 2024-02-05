@@ -10,7 +10,7 @@
 |OS|![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![MacOS](https://img.shields.io/badge/MacOS-007ACC?style=for-the-badge&logo=apple&logoColor=white)
 |Cloud & Platforms as a Service (PaaS)|![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)|
 |Version Control|![Git](https://img.shields.io/badge/Git-232F3E?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-232F3E?style=for-the-badge&logo=github&logoColor=white)|
-|Tools|![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Markdown](https://img.shields.io/badge/Markdown-007ACC?style=for-the-badge&logo=markdown&logoColor=white)|
+|Tools|![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)|
 
 ## Skills I'm Learning
 
