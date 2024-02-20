@@ -1,6 +1,6 @@
 # Hi there 👋
 
-## My Skills and Technologies
+## My skills and technologies
 
 |Category|Tech|
 |---|---|
@@ -21,13 +21,13 @@
 |Frameworks|![React](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)|
 |Testing|![React Testing Library](https://img.shields.io/badge/-React%20Testing%20Library-e9554d?style=for-the-badge&logo=octopusdeploy&logoColor=white)|
 
-## My Stats
+## My stats
 
-### GitHub Stats
+### GitHub stats
 
 ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=JackPlowman&show_icons=true)
 
-### Code Training
+### Code training
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/JackPlowman?hide=ranking)
 <!-- ![Codewars](https://github.r2v.ch/codewars?user=JackPlowman&stroke=%23BB432C) -->
