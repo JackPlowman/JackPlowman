@@ -30,4 +30,4 @@
 ### Code Training
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/JackPlowman?hide=ranking)
-![Codewars](https://github.r2v.ch/codewars?user=JackPlowman&stroke=%23BB432C)
+<!-- ![Codewars](https://github.r2v.ch/codewars?user=JackPlowman&stroke=%23BB432C) -->
