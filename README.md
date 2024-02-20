@@ -25,7 +25,8 @@
 
 ### GitHub Stats
 
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=JackPlowman&show_icons=true)
+![My Repository's Stats](https://github-readme-stats.vercel.app/api?username=JackPlowman&show_icons=true)
+![My Repository's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=JackPlowman&layout=compact)
 
 ### Code Training
 
