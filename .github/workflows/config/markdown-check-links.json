@@ -3,5 +3,5 @@
     200
   ],
   "ignorePatterns": [],
-  "timeout": "5s"
+  "timeout": "30s"
 }
