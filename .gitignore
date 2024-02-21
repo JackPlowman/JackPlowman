@@ -1,3 +1,1 @@
-.github/workflows/config/styles/*
-!.github/workflows/config/styles/.gitkeep
-!.github/workflows/config/styles/config/vocabularies/
+.github/workflows/config/styles/write-good
