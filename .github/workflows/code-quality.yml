@@ -36,3 +36,13 @@ jobs:
           config-file: .github/workflows/config/markdown-check-links.json
           base-branch: main
           check-modified-files-only: "no"
+
+  prose-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run Vale
+        uses: errata-ai/vale-action@v2.1.0
+        with:
+          fail_on_error: true
