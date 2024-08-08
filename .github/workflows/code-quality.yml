@@ -10,39 +10,19 @@ permissions:
   contents: read
 
 jobs:
-  check-editorconfig:
+  check-code-quality:
+    name: Check Code Quality
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: EditorConfig Check
-        uses: editorconfig-checker/action-editorconfig-checker@v2
-
-  check-markdown-code-quality:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Check Markdown format
-        uses: DavidAnson/markdownlint-cli2-action@v16
-        with:
-          config: .github/workflows/config/.markdownlint.json
-      - name: Check Markdown links
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
-        with:
-          use-quiet-mode: "yes"
-          config-file: .github/workflows/config/markdown-check-links.json
-          base-branch: main
-          check-modified-files-only: "no"
-
-  prose-check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Run Vale
-        uses: errata-ai/vale-action@v2.1.0
         with:
-          fail_on_error: true
+          fetch-depth: 0
+      - name: Lint Code Base
+        uses: super-linter/super-linter@v6.8.0
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: origin/main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: .github/super-linter-configs
+          YAML_ERROR_ON_WARNING: true
