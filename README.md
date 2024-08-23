@@ -8,5 +8,5 @@ Consider taking a look at my [tech stack](my-tech.md) if you're interested in le
 
 ### GitHub Stats
 
-![My Repository's Stats](https://github-readme-stats.vercel.app/api?username=JackPlowman&show_icons=true)
-![My Repository's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=JackPlowman&layout=compact)
+![My Repository's Stats](https://github-readme-stats.vercel.app/api?username=JackPlowman&show_icons=true&theme=transparent)
+![My Repository's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=JackPlowman&layout=compact&theme=transparent)
