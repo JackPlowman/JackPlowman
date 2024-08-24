@@ -19,11 +19,11 @@
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
       "**/.git": true,
-      "**/tmp": true
+      "**/tmp": true,
     },
     "search.exclude": {
       "**/.git": true,
-      "**/tmp": true
+      "**/tmp": true,
     },
     "terminal.integrated.fontFamily": "Hack Nerd Font",
     "window.title": "${activeEditorMedium}${separator}${rootName}${separator}${rootPath}",
@@ -32,13 +32,13 @@
     "workbench.tree.indent": 24,
     "[markdown]": {
       "editor.insertSpaces": true,
-      "editor.tabSize": 2
+      "editor.tabSize": 2,
     },
-    "workbench.colorTheme": "Solarized Dark"
+    "workbench.colorTheme": "Solarized Dark",
   },
   "folders": [
     {
-      "path": "."
-    }
-  ]
+      "path": ".",
+    },
+  ],
 }

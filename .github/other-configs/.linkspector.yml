@@ -1,0 +1,4 @@
+files:
+  - README.md
+aliveStatusCodes:
+  - 200
