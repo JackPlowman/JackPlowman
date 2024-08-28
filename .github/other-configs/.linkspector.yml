@@ -1,4 +1,5 @@
 files:
   - README.md
+  - LICENSE
 aliveStatusCodes:
   - 200
