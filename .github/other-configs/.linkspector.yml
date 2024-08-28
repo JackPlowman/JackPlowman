@@ -1,6 +1,4 @@
-files:
-  - README.md
-  - LICENSE
-  - MY_TECH.md
+dirs:
+  - ./
 aliveStatusCodes:
   - 200
