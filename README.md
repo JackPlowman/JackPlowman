@@ -2,7 +2,7 @@
 
 My name is Jack Plowman, a software engineer specialising in backend development and DevOps. My core tech stack is Python, Terraform, and AWS.
 
-Consider taking a look at my [tech stack](my-tech.md) if you're interested in learning more about my skills and technologies.
+Consider taking a look at my [tech stack](MY_TECH.md) if you're interested in learning more about my skills and technologies.
 
 ## My Stats
 
