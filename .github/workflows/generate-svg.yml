@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   github-metrics:
@@ -51,3 +52,5 @@ jobs:
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
           committer_message: "Update GitHub metrics"
+          output_action: pull-request-squash
+          output_condition: data-changed
