@@ -4,9 +4,4 @@ My name is Jack Plowman, a software engineer specialising in backend development
 
 Consider taking a look at my [tech stack](https://jackplowman.github.io/tech-radar/) if you're interested in learning more about my skills and technologies.
 
-## My Stats
-
-### GitHub Stats
-
-![My Repository's Stats](https://github-readme-stats.vercel.app/api?username=JackPlowman&show_icons=true&theme=transparent)
-![My Repository's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=JackPlowman&layout=compact&theme=transparent)
+![Metrics](https://metrics.lecoq.io/JackPlowman?template=classic&isocalendar=1&lines=1&habits=1&languages=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&isocalendar=false&isocalendar.duration=full-year&languages=false&languages.limit=8&languages.threshold=0%25&languages.other=false&languages.colors=github&languages.sections=most-used&languages.indepth=false&languages.analysis.timeout=15&languages.analysis.timeout.repositories=7.5&languages.categories=markup%2C%20programming&languages.recent.categories=markup%2C%20programming&languages.recent.load=300&languages.recent.days=14&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&lines.delay=0&habits=false&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&habits.charts.type=classic&habits.trim=false&habits.languages.limit=8&habits.languages.threshold=0%25&config.timezone=Europe%2FLondon)
