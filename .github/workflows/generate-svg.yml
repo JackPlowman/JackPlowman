@@ -1,9 +1,10 @@
 # Visit https://github.com/lowlighter/metrics#-documentation for full reference
 
 name: Metrics
+
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 8,12,16 * * *"
   workflow_dispatch:
   push:
     branches: "main"
@@ -15,7 +16,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@v3.34
+      - name: Generate GitHub Metrics
+        uses: lowlighter/metrics@v3.34
         with:
           # Configuration of Metrics
           user: JackPlowman
