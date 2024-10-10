@@ -26,6 +26,7 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/London
           plugin_habits: yes
+          plugin_habits_charts: yes
           plugin_habits_charts_type: classic
           plugin_habits_days: 30
           plugin_habits_facts: yes
