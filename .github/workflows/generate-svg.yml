@@ -21,7 +21,7 @@ jobs:
         uses: lowlighter/metrics@v3.34
         with:
           # Size
-          config_display: columns
+          config_display: large
           # Configuration of Metrics
           user: JackPlowman
           template: classic
