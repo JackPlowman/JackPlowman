@@ -20,6 +20,8 @@ jobs:
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@v3.34
         with:
+          # Size
+          config_display: columns
           # Configuration of Metrics
           user: JackPlowman
           template: classic
