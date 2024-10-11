@@ -28,7 +28,6 @@ jobs:
           base: header, activity, community, repositories, metadata
           base_indepth: yes
           repositories_batch: 1000
-          repositories_forks: yes
           config_timezone: Europe/London
           plugin_habits: yes
           plugin_habits_charts: yes
