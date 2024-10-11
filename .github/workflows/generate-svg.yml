@@ -26,6 +26,9 @@ jobs:
           user: JackPlowman
           template: classic
           base: header, activity, community, repositories, metadata
+          base_indepth: yes
+          repositories_batch: 1000
+          repositories_forks: yes
           config_timezone: Europe/London
           plugin_habits: yes
           plugin_habits_charts: yes
@@ -42,10 +45,10 @@ jobs:
           plugin_languages_analysis_timeout_repositories: 7.5
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
-          plugin_languages_limit: 8
+          plugin_languages_limit: 10
           plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
+          plugin_languages_recent_days: 365
+          plugin_languages_recent_load: 1000
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
           plugin_lines: yes
