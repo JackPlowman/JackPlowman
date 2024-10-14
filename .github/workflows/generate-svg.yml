@@ -47,7 +47,7 @@ jobs:
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
           # Git Configuration
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: NOT_NEEDED
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           committer_message: "Update GitHub metrics"
           output_condition: data-changed
