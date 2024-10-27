@@ -42,10 +42,6 @@ jobs:
           plugin_languages_recent_load: 1000
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-          plugin_lines: yes
-          plugin_lines_history_limit: 1
-          plugin_lines_repositories_limit: 4
-          plugin_lines_sections: base
           # Git Configuration
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
