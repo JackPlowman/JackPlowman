@@ -74,7 +74,12 @@ jobs:
         uses: astral-sh/setup-uv@v4.2.0
         with:
           version: "latest"
-      - name: Install zizmor
-        run: uv tool install zizmor
-      - name: Check workflow files
-        run: zizmor .github/workflows
+      - name: Run zizmor 🌈
+        run: uvx zizmor .github/workflows --persona=pedantic --format sarif . > results.sarif
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v3.27.9
+        with:
+          sarif_file: results.sarif
+          category: zizmor
