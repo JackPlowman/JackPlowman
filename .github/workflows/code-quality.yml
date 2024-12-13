@@ -43,3 +43,17 @@ jobs:
           reporter: github-pr-review
           fail_on_error: true
           filter_mode: nofilter
+
+  run-actionlint:
+    name: Check GitHub Actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Download actionlint
+        id: get_actionlint
+        run: bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+      - name: Check workflow files
+        run: ${{ steps.get_actionlint.outputs.executable }} -color
