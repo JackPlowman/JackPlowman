@@ -59,7 +59,7 @@ jobs:
         id: get_actionlint
         run: bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
       - name: Check workflow files
-        run: ${{ steps.get_actionlint.outputs.executable }} -color
+        run: ${{ steps.get_actionlint.outputs.executable }} -color # zizmor: ignore[template-injection]
 
   run-zizmor:
     name: Check GitHub Actions with zizmor
