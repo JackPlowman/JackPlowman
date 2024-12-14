@@ -9,13 +9,12 @@ on:
   push:
     branches: "main"
 
-permissions:
-  contents: read
-
 jobs:
   github-metrics:
     name: GitHub Metrics
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@v3.34
