@@ -4,6 +4,7 @@ rules:
   document-start: disable
   truthy: disable
   line-length: disable
+  comments: disable
 
 ignore:
   - .linkspector.yml
