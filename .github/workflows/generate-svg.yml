@@ -19,7 +19,7 @@ jobs:
       contents: write
     steps:
       - name: Generate GitHub Metrics
-        uses: lowlighter/metrics@v3.34
+        uses: lowlighter/metrics@v4
         with:
           # Size
           config_display: large
