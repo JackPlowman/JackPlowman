@@ -85,7 +85,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3.28.1
+        uses: github/codeql-action/init@v3.28.5
         with:
           languages: actions
           queries: security-and-quality
