@@ -28,7 +28,7 @@ format-check:
 
 # Run gitleaks detection
 gitleaks-detect:
-    gitleaks detect --source . > /dev/null
+    gitleaks detect --source .
 
 # ------------------------------------------------------------------------------
 # Lefthook
