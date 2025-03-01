@@ -23,12 +23,12 @@ format-check:
     just --fmt --check --unstable
 
 # ------------------------------------------------------------------------------
-# gitleaks
+# Gitleaks
 # ------------------------------------------------------------------------------
 
 # Run gitleaks detection
 gitleaks-detect:
-    gitleaks detect --source . > /dev/null
+    gitleaks detect --source .
 
 # ------------------------------------------------------------------------------
 # Lefthook
