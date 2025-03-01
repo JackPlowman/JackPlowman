@@ -13,3 +13,5 @@ pre-commit:
       run: just -q format-check
     Lefthook Validate:
       run: just -q lefthook-validate
+    Zizmor Checks:
+      run: just -q zizmor-check
