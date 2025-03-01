@@ -4,14 +4,14 @@ colors: true
 
 pre-commit:
   parallel: true
-  jobs:
-    - name: Git Leaks Detection
+  commands:
+    Git Leaks Detection:
       run: just -q gitleaks-detect
 
-    - name: Prettier Checks
+    Prettier Checks:
       run: just -q prettier-check
       staged_fixed: true
 
-    - name: Justfile Format Checks
+    Justfile Format Checks:
       run: just -q format-check
       staged_fixed: true
