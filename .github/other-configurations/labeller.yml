@@ -9,7 +9,7 @@ dependencies:
       - changed-files:
           - any-glob-to-any-file: ["**/uv.lock", "package-lock.json"]
       - head-branch: ["^dependabot"]
-configuration:
+configurations:
   - any:
       - changed-files:
           - any-glob-to-any-file:

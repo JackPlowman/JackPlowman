@@ -3,8 +3,8 @@
   name: bug
   description: Something isn't working
 - color: fef2c0
-  name: configuration
-  description: Changes to configuration files
+  name: configurations
+  description: Pull requests that update configuration files
 - color: 0075ca
   name: documentation
   description: Improvements or additions to documentation
