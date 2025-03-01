@@ -1,10 +1,17 @@
 # https://github.com/evilmartians/lefthook
+min_version: 1.1.3
+colors: true
+
 pre-commit:
   parallel: true
   jobs:
     - name: Git Leaks Detection
       run: just -q gitleaks-detect
+
     - name: Prettier Checks
       run: just -q prettier-check
+      staged_fixed: true
+
     - name: Justfile Format Checks
       run: just -q format-check
+      staged_fixed: true
