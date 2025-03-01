@@ -13,4 +13,3 @@ pre-commit:
     Justfile Format Checks:
       run: just -q format
       staged_fixed: true
-
