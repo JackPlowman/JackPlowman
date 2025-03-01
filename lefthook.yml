@@ -1,0 +1,10 @@
+# https://github.com/evilmartians/lefthook
+pre-commit:
+  parallel: true
+  jobs:
+    - name: Git Leaks Detection
+      run: just -q gitleaks-detect
+    - name: Prettier Checks
+      run: just -q prettier-check
+    - name: Justfile Format Checks
+      run: just -q format-check
