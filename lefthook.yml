@@ -7,11 +7,9 @@ pre-commit:
   commands:
     Git Leaks Detection:
       run: just -q gitleaks-detect
-
     Prettier Checks:
-      run: just -q prettier-check
+      run: just -q prettier-format
       staged_fixed: true
-
     Justfile Format Checks:
-      run: just -q format-check
+      run: just -q format
       staged_fixed: true
