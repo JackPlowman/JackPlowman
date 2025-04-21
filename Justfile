@@ -47,6 +47,18 @@ zizmor-check:
     zizmor .
 
 # ------------------------------------------------------------------------------
+# Pinact
+# ------------------------------------------------------------------------------
+
+# Run pinact
+pinact-run:
+    pinact run -c .github/other-configurations/pinact.yml
+
+# Run pinact checking
+pinact-check:
+    pinact run --verify --check -c .github/other-configurations/pinact.yml
+
+# ------------------------------------------------------------------------------
 # Git Hooks
 # ------------------------------------------------------------------------------
 
