@@ -56,7 +56,7 @@ pinact-run:
 
 # Run pinact checking
 pinact-check:
-    pinact run --verify --check -c .github/other-configurations/pinact.yml
+    pinact run -c .github/other-configurations/pinact.yml --verify --check
 
 # ------------------------------------------------------------------------------
 # Git Hooks
