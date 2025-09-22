@@ -30,7 +30,7 @@ jobs:
     name: CodeQL Analysis
     permissions:
       contents: read
-      security-events: write
+      security-events: write #
     strategy:
       matrix:
         language: [actions]
