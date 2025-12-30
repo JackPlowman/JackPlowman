@@ -84,4 +84,4 @@ editorconfig-check:
 
 # Install pre commit hook to run on all commits
 install-git-hooks:
-    lefthook install -f
+    pre-commit install
