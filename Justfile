@@ -31,12 +31,11 @@ gitleaks-detect:
     gitleaks detect --source .
 
 # ------------------------------------------------------------------------------
-# Lefthook
+# Prek
 # ------------------------------------------------------------------------------
 
-# Validate lefthook config
-lefthook-validate:
-    lefthook validate
+prek-check:
+    find . -name "pre-commit-config.*" -exec prek validate-config -c {} \;
 
 # ------------------------------------------------------------------------------
 # Zizmor
