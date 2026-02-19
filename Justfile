@@ -85,3 +85,24 @@ editorconfig-check:
 # Install git hooks using prek
 install-git-hooks:
     prek install
+
+# ------------------------------------------------------------------------------
+# Prek
+# ------------------------------------------------------------------------------
+
+# Prek update
+prek-update:
+    prek autoupdate
+
+prek-update-additional-dependencies:
+    uv run --script https://raw.githubusercontent.com/JackPlowman/update-prek-additional-dependencies/refs/heads/main/update_prek_additional_dependencies.py
+
+# ------------------------------------------------------------------------------
+# Update All Tools
+# ------------------------------------------------------------------------------
+
+# Update all tools
+update:
+    just pinact-update
+    just prek-update
+    just prek-update-additional-dependencies
