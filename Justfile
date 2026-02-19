@@ -90,8 +90,13 @@ install-git-hooks:
 # Prek
 # ------------------------------------------------------------------------------
 
-# Prek update
+# Update prek hooks and additional dependencies
 prek-update:
+    just prek-update-hooks
+    just prek-update-additional-dependencies
+
+# Prek update hooks
+prek-update-hooks:
     prek autoupdate
 
 prek-update-additional-dependencies:
