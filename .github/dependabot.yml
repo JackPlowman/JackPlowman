@@ -20,3 +20,19 @@ updates:
           - "minor"
     cooldown:
       default-days: 7
+
+  - package-ecosystem: "pre-commit"
+    directory: "/"
+    schedule:
+      interval: "cron"
+      cronjob: "30 7 * * *"
+      timezone: "Europe/London"
+    target-branch: "main"
+    groups:
+      pre-commit:
+        applies-to: "version-updates"
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
