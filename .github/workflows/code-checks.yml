@@ -27,7 +27,7 @@ jobs:
     strategy:
       matrix:
         language: [actions]
-    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@7e514a7e5ebf9943ad24d6e9e18781bea8d603f8 # v2026.03.09.03
+    uses: JackPlowman/reusable-workflows/.github/workflows/codeql-analysis.yml@302833d53c3a6827fe433f01b624873b09b0cc94 # v2026.03.16.01
     with:
       language: ${{ matrix.language }}
 
@@ -38,6 +38,6 @@ jobs:
       actions: read # Allow the workflow to read actions metadata
       pull-requests: write # Allow the workflow to create and modify pull request comments
       security-events: write # Allow the workflow to upload analysis results
-    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@7e514a7e5ebf9943ad24d6e9e18781bea8d603f8 # v2026.03.09.03
+    uses: JackPlowman/reusable-workflows/.github/workflows/common-code-checks.yml@302833d53c3a6827fe433f01b624873b09b0cc94 # v2026.03.16.01
     secrets:
       workflow_github_token: ${{ secrets.GITHUB_TOKEN }}
