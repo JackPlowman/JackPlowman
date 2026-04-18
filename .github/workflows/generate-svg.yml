@@ -49,7 +49,7 @@ jobs:
           plugin_languages_threshold: 0%
           plugin_languages_ignored: JSON, YAML, Markdown
           # Git Configuration
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }} # zizmor: ignore[secrets-outside-env]
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           committer_message: "Update GitHub metrics"
           output_condition: data-changed
