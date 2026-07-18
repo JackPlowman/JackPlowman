@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/pinact/main/json-schema/pinact.json
+version: 3
+
+ignore_actions:
+  - name: "JackPlowman/coding-metrics"
+    ref: "9e7f1c846582cf99f0b5f14ca0aa04fdb6c02888"

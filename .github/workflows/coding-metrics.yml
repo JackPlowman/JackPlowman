@@ -1,0 +1,31 @@
+# Visit https://github.com/lowlighter/metrics#-documentation for full reference
+
+name: Metrics
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  github-metrics:
+    name: GitHub Metrics
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # For committing the updated SVG file
+
+    steps:
+      - name: Coding Metrics
+        uses: JackPlowman/coding-metrics@9e7f1c846582cf99f0b5f14ca0aa04fdb6c02888
+        with:
+          github_token: ${{ secrets.GH_TOKEN }} # zizmor: ignore[secrets-outside-env]
+          output_file_name: github-metrics.svg
+          colour_profile: dark
