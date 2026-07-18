@@ -70,7 +70,14 @@ repos:
         entry: pinact
         additional_dependencies:
           - github.com/suzuki-shunsuke/pinact/v4/cmd/pinact@v4.1.0
-        args: ["run", "--verify", "--check"]
+        args:
+          [
+            "run",
+            "-c",
+            ".github/tool-configurations/pinact.yml",
+            "--verify",
+            "--check",
+          ]
         files: "^\\.github/(workflows|actions)/.*\\.ya?ml$|(^|/)action\\.ya?ml$"
         pass_filenames: false
         language_version: "go1.26.4"
