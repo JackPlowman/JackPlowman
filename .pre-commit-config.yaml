@@ -77,6 +77,8 @@ repos:
             ".github/tool-configurations/pinact.yml",
             "--verify",
             "--check",
+            "--exclude",
+            "^docker://",
           ]
         files: "^\\.github/(workflows|actions)/.*\\.ya?ml$|(^|/)action\\.ya?ml$"
         pass_filenames: false
