@@ -3,4 +3,4 @@ version: 3
 
 ignore_actions:
   - name: "JackPlowman/coding-metrics"
-    ref: "9e7f1c846582cf99f0b5f14ca0aa04fdb6c02888"
+    ref: "e198613e280a6abfd2fb99db228a28ab9ad81c8d"
