@@ -29,30 +29,30 @@ jobs:
       security-events: write # Allow the workflow to upload analysis results
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        uses: github/codeql-action/init@v4.39.3
         with:
           languages: ${{ matrix.language }}
           queries: security-and-quality
-          config-file: GitHubSecurityLab/CodeQL-Community-Packs/configs/default.yml@v0.8.2
+          config-file: GitHubSecurityLab/CodeQL-Community-Packs/configs/default.yml@v0.9.0
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        uses: github/codeql-action/analyze@v4.39.3
 
   check-justfile-format:
     name: Check Justfile Format
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up Just
-        uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
+        uses: extractions/setup-just@v4.0.0
         with:
           just-version: "1.59.0"
       - name: Check Justfile Format
@@ -65,12 +65,12 @@ jobs:
       pull-requests: write # to create PR review comments
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Check Markdown links
-        uses: UmbrellaDocs/action-linkspector@568ec8d29fa92b31fd9ea5381e155c51e922af83 # v1.5.5
+        uses: UmbrellaDocs/action-linkspector@v1.5.5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} # zizmor: ignore[secrets-outside-env]
           config_file: .github/tool-configurations/.linkspector.yml
@@ -84,13 +84,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Check actions are pinned (with config)
         if: ${{ hashFiles('.github/tool-configurations/pinact.yml') != '' }}
-        uses: suzuki-shunsuke/pinact-action@896d595f299e71d65b9d28349d6956abe144390a # v3.0.0
+        uses: suzuki-shunsuke/pinact-action@v3.1.0
         with:
           skip_push: "true"
           # Zizmor validates Docker image digest pins; Pinact only handles Git refs.
@@ -99,7 +99,7 @@ jobs:
           PINACT_CONFIG: .github/tool-configurations/pinact.yml
       - name: Check actions are pinned (without config)
         if: ${{ hashFiles('.github/tool-configurations/pinact.yml') == '' }}
-        uses: suzuki-shunsuke/pinact-action@896d595f299e71d65b9d28349d6956abe144390a # v3.0.0
+        uses: suzuki-shunsuke/pinact-action@v3.1.0
         with:
           skip_push: "true"
           # Zizmor validates Docker image digest pins; Pinact only handles Git refs.
@@ -110,18 +110,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up Just
-        uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
+        uses: extractions/setup-just@v4.0.0
         with:
           just-version: "1.59.0"
       - name: Run Prek Action
-        uses: j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d # v3.1.0
+        uses: j178/prek-action@v3.1.0
         with:
-          prek-version: "0.5.7"
+          prek-version: "0.5.10"
           install-only: "true"
       - name: Prek Check
         run: just prek-check
@@ -131,7 +131,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -145,7 +145,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -162,18 +162,18 @@ jobs:
       security-events: write # to create secret scanning alerts
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Run Gitleaks
-        uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
+        uses: gitleaks/gitleaks-action@v3.0.0
         env:
           GITHUB_TOKEN: ${{ github.token }}
           GITLEAKS_ENABLE_UPLOAD_ARTIFACT: "true"
           GITLEAKS_NOTIFY_USER_LIST: "@JackPlowman"
       - name: Upload Anchore scan SARIF report
-        uses: github/codeql-action/upload-sarif@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        uses: github/codeql-action/upload-sarif@v4.39.3
         with:
           sarif_file: results.sarif
 
@@ -184,22 +184,22 @@ jobs:
       security-events: write # to create secret scanning alerts
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Scan current project
         id: scan
-        uses: anchore/scan-action@27805bf3b4e84b4a5c980df22ed233c00390a439 # v7.4.2
+        uses: anchore/scan-action@v7.4.2
         with:
           path: "."
         continue-on-error: true
       - name: Upload Anchore scan SARIF report
-        uses: github/codeql-action/upload-sarif@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        uses: github/codeql-action/upload-sarif@v4.39.3
         with:
           sarif_file: ${{ steps.scan.outputs.sarif }}
       - name: Scan current project
-        uses: anchore/scan-action@27805bf3b4e84b4a5c980df22ed233c00390a439 # v7.4.2
+        uses: anchore/scan-action@v7.4.2
         with:
           path: "."
 
@@ -208,12 +208,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Run Markdownlint
-        uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
+        uses: DavidAnson/markdownlint-cli2-action@v25.0.0
         with:
           config: ".github/tool-configurations/.markdownlint-cli2.jsonc"
           globs: |
@@ -226,34 +226,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up Just
-        uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
+        uses: extractions/setup-just@v4.0.0
         with:
           just-version: "1.59.0"
       - name: Run Prek Action
-        uses: j178/prek-action@44924fe9ef4a6f88253c4b6b1bf11c689d3ce53d # v3.1.0
+        uses: j178/prek-action@v3.1.0
         with:
-          prek-version: "0.5.7"
+          prek-version: "0.5.10"
 
   run-prettier:
     name: "Check Code Formatting with Prettier"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Setup Node.js environment
-        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        uses: actions/setup-node@v7.1.0
       - name: Install Prettier
-        run: npm install -g prettier@3.9.10 # zizmor: ignore[adhoc-packages]
+        run: npm install -g prettier@3.10.1 # zizmor: ignore[adhoc-packages]
       - name: Set up Just
-        uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4.0.0
+        uses: extractions/setup-just@v4.0.0
         with:
           just-version: "1.59.0"
       - name: Check Code Formatting with Prettier
@@ -266,21 +266,21 @@ jobs:
       security-events: write # to create secret scanning alerts
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Run Trivy vulnerability scanner in fs mode
-        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           scan-type: "fs"
           scan-ref: "."
           trivy-config: .github/tool-configurations/trivy.yml
           format: "sarif"
           output: "trivy-results.sarif"
-          version: v0.76.1
+          version: v0.76.2
       - name: Upload Trivy SARIF report
-        uses: github/codeql-action/upload-sarif@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        uses: github/codeql-action/upload-sarif@v4.39.3
         with:
           sarif_file: trivy-results.sarif
 
@@ -291,12 +291,12 @@ jobs:
       security-events: write # to create secret scanning alerts
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Secret Scanning
-        uses: trufflesecurity/trufflehog@31ce31ee1abbcc7dc8eee5764c17121c3044c8b2 # v3.99.7
+        uses: trufflesecurity/trufflehog@v3.99.9
         with:
           extra_args: --results=verified,unknown
 
@@ -305,12 +305,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: "Yamllint"
-        uses: karancode/yamllint-github-action@4052d365f09b8d34eb552c363d1141fd60e2aeb2 # v3.0.0
+        uses: karancode/yamllint-github-action@v3.0.0
         with:
           yamllint_file_or_dir: "."
           yamllint_config_filepath: ".github/tool-configurations/.yaml-lint.yml"
@@ -327,12 +327,12 @@ jobs:
       security-events: write # to create secret scanning alerts
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
       - name: Run zizmor 🌈
-        uses: zizmorcore/zizmor-action@53290badfa369cb0bf7ad16342cb62c2fa47ac7b # v0.8.0
+        uses: zizmorcore/zizmor-action@v0.8.1
         with:
           persona: auditor
-          version: 1.31.1
+          version: 1.32.0
