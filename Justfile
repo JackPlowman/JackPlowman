@@ -36,7 +36,7 @@ gitleaks-detect:
 
 # Run prek checking on all pre-commit config files
 prek-check:
-    find . -name "pre-commit-config.*" -exec prek validate-config -c {} \;
+    prek validate-config .pre-commit-config.yaml
 
 # ------------------------------------------------------------------------------
 # Zizmor
@@ -58,19 +58,17 @@ actionlint-check:
 # Pinact
 # ------------------------------------------------------------------------------
 
-export pinact_config := "-c .github/tool-configurations/pinact.yml --exclude '^docker://'"
+# Generate the GitHub Actions dependency lockfile
+actions-lock:
+    gh actions-lock
 
-# Run pinact
-pinact-run:
-    pinact run ${pinact_config}
+# Verify the workflow dependency lockfile against GitHub
+actions-lock-check:
+    gh actions-lock --verify
 
-# Run pinact checking
-pinact-check:
-    pinact run ${pinact_config} --verify --check
-
-# Run pinact update
-pinact-update:
-    pinact run ${pinact_config} --update
+# Refresh workflow dependency pins
+actions-lock-update:
+    gh actions-lock --relock
 
 # ------------------------------------------------------------------------------
 # EditorConfig
@@ -110,5 +108,5 @@ prek-update-additional-dependencies:
 
 # Update all tools
 update:
-    just pinact-update
+    just actions-lock-update
     just prek-update

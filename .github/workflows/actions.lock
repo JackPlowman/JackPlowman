@@ -16,7 +16,6 @@ workflows:
         - 'gitleaks/gitleaks-action@v3.0.0'
         - 'j178/prek-action@v3.1.0'
         - 'karancode/yamllint-github-action@v3.0.0'
-        - 'suzuki-shunsuke/pinact-action@v3.1.0'
         - 'trufflesecurity/trufflehog@v3.99.9'
         - 'umbrelladocs/action-linkspector@v1.5.5'
         - 'zizmorcore/zizmor-action@v0.8.1'
@@ -30,6 +29,8 @@ workflows:
     '.github/workflows/sync-labels.yml':
         - 'actions/checkout@v7.0.1'
         - 'micnncim/action-label-syncer@v1.3.0'
+    '.github/workflows/verify-actions-lock.yml':
+        - 'actions/checkout@v7.0.1'
 dependencies:
     'actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae':
         ref: 'v5.0.5'
@@ -154,11 +155,6 @@ dependencies:
         commit: 'sha1-d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f'
         owner_id: 48765237
         repo_id: 286005511
-    'suzuki-shunsuke/pinact-action@v3.1.0':
-        ref: 'v3.1.0'
-        commit: 'sha1-b1a1f46bb10f2908950d95f626ca8cc109e2cf7d'
-        owner_id: 13323303
-        repo_id: 663789591
     'trufflesecurity/trufflehog@v3.99.9':
         ref: 'v3.99.9'
         commit: 'sha1-3bd2b5887eb0efb8fa18bfd1d296032924e4ffdc'
