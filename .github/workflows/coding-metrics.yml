@@ -24,8 +24,8 @@ jobs:
 
     steps:
       - name: Coding Metrics
-        # Upstream has no release tags. The workflow lockfile pins main to a commit.
-        uses: JackPlowman/coding-metrics@main
+        # Upstream has no release tags, so select a commit from main.
+        uses: JackPlowman/coding-metrics@c9fa9bb2169c251560fbaf18e16b83f155d7d530 # main
         with:
           github_token: ${{ secrets.GH_TOKEN }} # zizmor: ignore[secrets-outside-env]
           output_file_name: github-metrics.svg
