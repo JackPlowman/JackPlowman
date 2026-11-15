@@ -24,8 +24,8 @@ jobs:
 
     steps:
       - name: Coding Metrics
-        # Upstream has no release tags; pin the selected commit.
-        uses: JackPlowman/coding-metrics@c9fa9bb2169c251560fbaf18e16b83f155d7d530 # zizmor: ignore[stale-action-refs]
+        # Upstream has no release tags, so select a commit from main.
+        uses: JackPlowman/coding-metrics@c9fa9bb2169c251560fbaf18e16b83f155d7d530 # main
         with:
           github_token: ${{ secrets.GH_TOKEN }} # zizmor: ignore[secrets-outside-env]
           output_file_name: github-metrics.svg
